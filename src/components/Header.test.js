@@ -10,20 +10,20 @@ describe("header component", () => {
       </BrowserRouter>
     );
 
-    const searchLinkEl = screen.getByText("Search");
-    fireEvent.click(searchLinkEl);
+    const searchButton = screen.getByText("Search");
+    fireEvent.click(searchButton);
     expect(global.window.location.pathname).toContain("/search");
   });
 
-  test("header should navigate to search component when search is clicked", () => {
+  test("header should navigate to wishlist component when wishlist is clicked", () => {
     render(
       <BrowserRouter>
         <Header />
       </BrowserRouter>
     );
 
-    const wishlistLinkEl = screen.getByText("Wishlist");
-    fireEvent.click(wishlistLinkEl);
+    const wishListButton = screen.getByText("Wishlist");
+    fireEvent.click(wishListButton);
     expect(global.window.location.pathname).toContain("/wishlist");
   });
 });
